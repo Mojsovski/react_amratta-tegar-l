@@ -1,1 +1,2 @@
-Repository tugas 1 Introduction Frond End
+Dalam Introduction Frond End , akan mempelajari tentang
+1. 
