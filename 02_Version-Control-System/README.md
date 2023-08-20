@@ -6,5 +6,5 @@ git init
 git add .
 git commit -m "first commit"
 git branch -M main
-git remote add origin "link repo github"
+git remote add origin "link repo github" , misalkan "https://github.com/Mojsovski/react_amratta-tegar-l.git"
 git push -u origin main
