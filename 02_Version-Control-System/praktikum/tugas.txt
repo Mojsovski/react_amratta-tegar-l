@@ -1,3 +1,3 @@
 - [x] Tugas Prioritas 1 dalam Version Control System adalah membuat repository ini
 - [x] Tugas Prioritas 2 dalam Version Control System adalah membuat branch baru
-- hasil dari pull request branch master
+- hasil dari pull request branch master ke main 
