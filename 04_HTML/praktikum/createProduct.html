@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Create Product</title>
+    </head>
+    <body>
+        <div>
+            <h1>Create Product</h1>
+            <h2>Detail Product</h2>
+        </div>
+        <div>
+            <div>
+                <label for="product_name">Product Name:</label><br>
+                <input type="text" name="product_name" id="product_name">
+            </div>
+            <br>
+            <div>
+                <label for="product_category">Product Category :</label><br>
+                <select id="cars" product_category="product_category" form="product_category">
+                <option value="choice">--- please choice one ---</option>
+                </select> 
+            </div>
+            <br>
+            <div>
+                <label for="product_freshness">Product Freshness:</label><br>
+                <input TYPE="radio" name="product_freshness" Value="yes">Brand New<br>
+                <input TYPE="radio" name="product_freshness" Value="no">Second Hank<br>
+                <input TYPE="radio" name="product_freshness" Value="no">Refurbished<br>
+            </div>
+            <br>
+            <div>
+                <label for="myfile">Image of Product :</label>
+                <input type="file" id="myfile" name="myfile"><br>
+            </div>
+            <br>
+            <div>
+                <label for="desc">Additional Description</label><br>
+                <textarea id="desc" name="desc" rows="4" cols="50"></textarea>
+                <br>
+            </div>
+            <br>
+            <div>
+                
+                <label for="product_price">Product Name:</label><br>
+                <input type="number" data-type="currency" id="product_price" placeholder="$100">
+            </div>
+            <br>
+            <input type="submit" value="Submit">
+        </div>
+    </body>
+</html>
