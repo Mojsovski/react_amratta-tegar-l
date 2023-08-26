@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title> Create Product</title>
     </head>
     <body>
@@ -8,44 +10,44 @@
             <h1>Create Product</h1>
             <h2>Detail Product</h2>
         </div>
-        <div>
+        <form action="#">
             <div>
-                <label for="product_name">Product Name:</label><br>
-                <input type="text" name="product_name" id="product_name">
+                <label for="#">Product Name:</label><br>
+                <input type="text" name="product_name" id="product_name" minlength="6" maxlength="50" required />
             </div>
             <br>
             <div>
-                <label for="product_category">Product Category :</label><br>
-                <select id="product_category" name="product_category" form="product_category">
+                <label for="#">Product Category :</label><br>
+                <select id="product_category" name="product_category" form="product_category" required>
                 <option value="product_category">--- please choice one ---</option>
                 </select> 
             </div>
             <br>
             <div>
-                <label for="product_freshness">Product Freshness:</label><br>
+                <label for="#">Product Freshness:</label><br>
                 <input TYPE="radio" name="product_freshness" Value="yes">Brand New<br>
                 <input TYPE="radio" name="product_freshness" Value="no">Second Hank<br>
                 <input TYPE="radio" name="product_freshness" Value="no">Refurbished<br>
             </div>
             <br>
             <div>
-                <label for="myfile">Image of Product :</label>
+                <label for="#">Image of Product :</label>
                 <input type="file" id="myfile" name="myfile"><br>
             </div>
             <br>
             <div>
-                <label for="desc">Additional Description</label><br>
-                <textarea id="desc" name="desc" rows="4" cols="50"></textarea>
+                <label for="#">Additional Description</label><br>
+                <textarea id="desc" name="desc" rows="4" cols="50" required></textarea>
                 <br>
             </div>
             <br>
             <div>
                 
-                <label for="product_price">Product Name:</label><br>
-                <input type="number" data-type="currency" id="product_price" placeholder="$100">
+                <label for="#">Product Name:</label><br>
+                <input type="number" data-type="currency" id="product_price" placeholder="$100" required />
             </div>
             <br>
             <input type="submit" value="Submit">
-        </div>
+        </form>
     </body>
 </html>

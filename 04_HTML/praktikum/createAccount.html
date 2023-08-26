@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title> Create Account</title>
     </head>
     <body>
@@ -8,46 +10,52 @@
             <h1>Create Account</h1>
             <h2>Detail Form</h2>
         </div>
+        <form action="#">
         <div>
             <div>
-                <label for="name_first">First name:</label><br>
-                <input type="text" name="name_first" id="name_first">
+                <label for="#">First name:</label><br>
+                <input type="text" name="name_first" id="name_first" required />
             </div>
             <br>
             <div>
-                <label for="name_last">Last name:</label><br>
-                <input type="text" name="name_last" id="name_last">
+                <label for="#">Last name:</label><br>
+                <input type="text" name="name_last" id="name_last" required />
             </div>
             <br>
             <div>
-                <label for="username">Username :</label><br>
-                <input type="text" name="username" id="username">
+                <label for="#">Username :</label><br>
+                <input type="text" name="username" id="username" required />
             </div>
             <br>
             <div>
-                <label for="email">Email :</label><br>
-                <input type="email" name="email" id="email">
+                <label for="#">Email :</label><br>
+                <input type="email" name="email" id="email" required />
             </div>
             <br>
             <div>
-                <label for="gender">Gender:</label><br>
+                <label for="#">Gender:</label><br>
                 <input TYPE="radio" name="gender" Value="no">Male<br>
                 <input TYPE="radio" name="gender" Value="no">Female<br>
             </div>
             <br>
             <div>
-                <label for="nasionality">Nasionality :</label><br>
-                <select id="nasionality" name="nasionality" form="nasionality">
+                <label for="#">Nasionality :</label><br>
+                <select id="nasionality" name="nasionality" form="nasionality" required>
                 <option value="choice">--- please choice one ---</option>
                 <option value="choice">Indonesia</option>
                 <option value="choice">Other</option>
                 </select> 
             </div>
             <br>
-
-
+            <div>
+                <label for="#">Language Spoken:</label><br>
+                <input TYPE="checkbox" name="language" Value="no">Bahasa Indonesia<br>
+                <input TYPE="checkbox" name="language" Value="no">English<br>
+                <input TYPE="checkbox" name="language" Value="no">Other<br>
+            </div>
             <br>
             <input type="submit" value="Submit">
         </div>
+        </form>
     </body>
 </html>
