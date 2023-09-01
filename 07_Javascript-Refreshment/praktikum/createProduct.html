@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Create Product</title>
+    <script src="./asset/script/script.js"></script>
+    <link rel="stylesheet" href="./asset/styles/custom.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Simple Header</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png"
+            class="rounded mx-auto d-block" alt="..." style="width: 62px; height: 50px;"> <br>
+        <div class="row align-items-start">
+            <div class="col">
+                <h2>Create Product</h2>
+                <p>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has
+                    a validation state that can be triggered by attempting to submit the form without completing it.</p>
+            </div>
+        </div>
+    </div>
+
+    <form id="productForm">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="product-form">
+                        <div class="form-group">
+                            <label for="productName">Product name:</label>
+                            <input type="text" class="form-control" id="productName" name="productName">
+                        </div>
+                        <br>
+
+                        <!-- product category -->
+                        <div class="form-group">
+                            <label for="productCategory">Product Category:</label>
+                            <select class="form-control" id="productCategory" name="productCategory">
+                                <option value="choice">Product 1</option>
+                                <option value="choice">Product 2</option>
+                                <option value="choice">Product 3</option>
+                            </select>
+                        </div>
+                        <br>
+                        <!-- upload file -->
+                        <div class="form-group">
+                            <label for="file">Upload File:</label>
+                            <input type="file" class="form-control-file" id="file" name="file">
+                        </div>
+                        <br>
+
+                        <!-- //product freshness -->
+                        <div class="form-group">
+                            <label for="productFreshness">Product Freshness:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="productFreshness"
+                                    id="productFreshness" value="brand-new">
+                                <label class="form-check-label" for="radio">Brand New</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="productFreshness"
+                                    id="productFreshness" value="second-hand">
+                                <label class="form-check-label" for="radio">Second Hand</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="productFreshness"
+                                    id="productFreshness" value="refufbished">
+                                <label class="form-check-label" for="radio">Refufbished</label>
+                            </div>
+                        </div>
+                        <br>
+
+                        <!-- //description -->
+                        <div class="form-group">
+                            <label for="description">Additional Description:</label>
+                            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                        </div>
+                        <br>
+                        <!-- //product price -->
+                        <div class="form-group">
+                            <label for="productPrice">Product Price:</label>
+                            <input type="number" class="form-control" id="productPrice" name="productPrice"
+                                placeholder="$100">
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary" style="width: 550px;">Submit</button>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
