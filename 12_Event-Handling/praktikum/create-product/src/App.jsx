@@ -1,6 +1,7 @@
-import CreateProduct from "./page/CreateProduct";
+import Home from "./page/Home";
+
 function App() {
-  return <CreateProduct />;
+  return <Home />;
 }
 
 export default App;
