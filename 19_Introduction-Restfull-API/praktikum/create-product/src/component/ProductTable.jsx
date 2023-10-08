@@ -31,7 +31,11 @@ function ProductTable() {
                 <td>
                   {data.file && (
                     <img
-                      src={data.file}
+                      src={
+                        typeof data.file === "string"
+                          ? data.file
+                          : URL.createObjectURL(data.file)
+                      }
                       alt={data.productName}
                       style={{ maxWidth: "100px", maxHeight: "100px" }}
                     />
