@@ -10,6 +10,7 @@ function ProductForm() {
   const dispatch = useDispatch();
 
   const setInitialData = () => {
+    dispatch(updateFormData({ field: "id", value: "" }));
     dispatch(updateFormData({ field: "productName", value: "" }));
     dispatch(updateFormData({ field: "productCategory", value: "" }));
     dispatch(updateFormData({ field: "productFreshness", value: "" }));
@@ -171,7 +172,6 @@ function ProductForm() {
               />
             </div>
             <br />
-
             <div className="form-group">
               <label htmlFor="productPrice">Product Price:</label>
               <input

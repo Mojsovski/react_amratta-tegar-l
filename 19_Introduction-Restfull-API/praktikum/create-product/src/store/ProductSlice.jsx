@@ -1,7 +1,21 @@
-import { createSlice } from "@reduxjs/toolkit";
-import Img1 from "../assets/rtx1.png";
-import Img2 from "../assets/rtx2.jpg";
-import Img3 from "../assets/rx1.jpg";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+// Define async thunk to fetch data from API
+export const fetchDataFromApi = createAsyncThunk(
+  "form/fetchDataFromApi",
+  async () => {
+    try {
+      // Ganti URL API dengan URL yang sesuai
+      const response = await axios.get(
+        "https://651e65f044a3a8aa4768443b.mockapi.io/products"
+      );
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  }
+);
 
 const initialState = {
   formData: {
@@ -11,34 +25,11 @@ const initialState = {
     productDesc: "",
     productPrice: "",
     file: null,
+    id: "",
   },
-  dataList: [
-    {
-      productName: "ASUS ROG RTX 4080",
-      productCategory: "Product 1",
-      productFreshness: "Brand New",
-      productDesc: "Nvidia",
-      productPrice: "17000000",
-      file: Img1,
-    },
-    {
-      productName: "Gigabyte RTX 4060 Low Profile",
-      productCategory: "Product 2",
-      productFreshness: "Brand New",
-      productDesc: "Nvidia",
-      productPrice: "5000000",
-      file: Img2,
-    },
-    {
-      productName: "Sapphire RX 7900 XT",
-      productCategory: "Product 3",
-      productFreshness: "Brand New",
-      productDesc: "AMD",
-      productPrice: "10000000",
-      file: Img3,
-    },
-  ],
+  dataList: [],
   errors: {},
+  status: "idle", // idle, loading, succeeded, failed
 };
 
 const ProductSlice = createSlice({
@@ -79,6 +70,19 @@ const ProductSlice = createSlice({
     setErrors: (state, action) => {
       state.errors = action.payload;
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchDataFromApi.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(fetchDataFromApi.fulfilled, (state, action) => {
+        state.status = "succeeded";
+        state.dataList = action.payload;
+      })
+      .addCase(fetchDataFromApi.rejected, (state) => {
+        state.status = "failed";
+      });
   },
 });
 

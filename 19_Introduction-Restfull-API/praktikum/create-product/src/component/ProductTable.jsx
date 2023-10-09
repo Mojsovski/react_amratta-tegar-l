@@ -23,7 +23,7 @@ function ProductTable() {
           <tbody>
             {dataList.map((data, index) => (
               <tr key={index}>
-                <td>{Num++}</td>
+                <td>{data.id}</td>
                 <td>{data.productName}</td>
                 <td>{data.productCategory}</td>
                 <td>{data.productFreshness}</td>
