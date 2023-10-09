@@ -1,4 +1,4 @@
-Kesimpulan dari pembelajaran materi Deployment :
+Kesimpulan dari pembelajaran materi Intoduction Restfull API :
 
 1. API (Application Programming Interface) adalah sekumpulan fungsi dan prosedur yang memungkinkan pembuatan aplikasi yang mengakses fitur atau data suatu sistem operasi, aplikasi, atau layanan lainnya. API merupakan jembatan penghubung antara aplikasi dengan database yang digunakan untuk menyimpan data.
 2. Sebelum melakukan pengambilan data di API, kita bisa cek API terlebih dahulu apakah bisa menampilkan data atau tidak dengan bantuan tool seperti Postman
