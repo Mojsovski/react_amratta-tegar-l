@@ -1,12 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// Define async thunk to fetch data from API
 export const fetchDataFromApi = createAsyncThunk(
   "form/fetchDataFromApi",
   async () => {
     try {
-      // Ganti URL API dengan URL yang sesuai
       const response = await axios.get(
         "https://651e65f044a3a8aa4768443b.mockapi.io/products"
       );
@@ -29,7 +27,7 @@ const initialState = {
   },
   dataList: [],
   errors: {},
-  status: "idle", // idle, loading, succeeded, failed
+  status: "idle",
 };
 
 const ProductSlice = createSlice({
@@ -61,6 +59,13 @@ const ProductSlice = createSlice({
       if (Object.keys(checkValid).length > 0) {
         state.errors = checkValid;
         return;
+      }
+
+      const isFormEmpty = Object.values(state.formData).every(
+        (value) => value === ""
+      );
+      if (isFormEmpty) {
+        return; // Jika masih kosong, tidak mengirim data ke API
       }
 
       state.dataList.push(state.formData);
