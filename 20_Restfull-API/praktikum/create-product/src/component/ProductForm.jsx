@@ -180,16 +180,20 @@ function ProductForm() {
             <br />
             {/* //description */}
             <div className="form-group">
-              <label htmlFor="description">Additional Description:</label>
+              <label htmlFor="productDesc">Additional Description:</label>
               <textarea
-                className="form-control"
-                id="description"
-                name="description"
+                className={`form-control ${
+                  errors.productDesc ? "is-invalid" : ""
+                }`}
+                id="productDesc"
+                name="productDesc"
                 rows={3}
-                defaultValue={""}
+                value={formData.productDesc}
+                onChange={handleChange}
               />
             </div>
             <br />
+            {/* product price */}
             <div className="form-group">
               <label htmlFor="productPrice">Product Price:</label>
               <input

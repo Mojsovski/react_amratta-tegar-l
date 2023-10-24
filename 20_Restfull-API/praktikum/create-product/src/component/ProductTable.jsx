@@ -24,6 +24,7 @@ function ProductTable() {
               <th>Product Name</th>
               <th>Product Category</th>
               <th>Product Freshness</th>
+              <th>Product Description</th>
               <th>Product Price</th>
               <th>Action</th>
             </tr>
@@ -35,6 +36,7 @@ function ProductTable() {
                 <td>{data.productName}</td>
                 <td>{data.productCategory}</td>
                 <td>{data.productFreshness}</td>
+                <td>{data.productDesc}</td>
                 <td>{data.productPrice}</td>
                 <td>
                   <Link
