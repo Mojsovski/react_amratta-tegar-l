@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom"; // Import useParams
+import { useParams } from "react-router-dom";
 import Header from "../component/Header";
 import {
   updateFormData,
@@ -10,7 +10,7 @@ import {
 } from "../store/ProductSlice";
 
 function EditProduct() {
-  const { id } = useParams(); // Ambil ID produk dari URL
+  const { id } = useParams();
   const formData = useSelector((state) => state.form.formData);
   const errors = useSelector((state) => state.form.errors);
   const dispatch = useDispatch();
